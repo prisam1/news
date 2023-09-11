@@ -14,6 +14,10 @@ header {
   text-align: center;
 }
 
+.img{
+  margin: 5px;
+  width:11rem;
+}
 .login-links {
   display: flex;
   gap: 20px;
@@ -78,10 +82,11 @@ button {
 .favorite-button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 8px;
   font-size: 24px;
   cursor: pointer;
   color: #e74c3c;
+  
 }
 
 .favorite-button.favorited {
@@ -92,6 +97,13 @@ a {
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
+}
+
+.goto{
+  margin-left:20px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold
 }
 .news-list {
   margin-top: 1rem;

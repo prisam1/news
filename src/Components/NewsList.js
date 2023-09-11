@@ -58,14 +58,20 @@ function NewsList() {
         {news.articles.map((article) => (
           <div key={article.id} className={`news-item ${isGridView ? 'grid-item' : ''}`}>
             <h3>{article.title}</h3>
+            <img src={article.urlToImage} alt="" className='img'/>
             <p>{article.description}</p>
+            <p>{article.content}</p>
+            
             <button 
               onClick={() => toggleFavorite(article.id)}
               className={`favorite-button ${favorites.includes(article.id) ? 'favorited' : ''}`}
             >
               &#9825; 
             </button>
-            <Link to={`/news/${article.title}`}>Read More</Link>
+            <Link to={`/news/${article.id}`}>Read More</Link>
+            <a href={article.url } className="goto" target="_blank" rel="noopener noreferrer">
+            Go to Page Link
+             </a>
           </div>
         ))}
       </div>
