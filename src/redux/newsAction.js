@@ -6,7 +6,15 @@ const COUNTRY = 'in'
 
 export const fetchNews = () => async (dispatch) => {
   try {
-    const response = await axios.get(`${NEWS_API_URL}?country=${COUNTRY}&apiKey=${API_KEY}`)
+    const headers = {
+      'User-Agent': 'YourUserAgent',
+      'Upgrade': 'HTTP/1.1',
+    };
+
+    const response = await axios.get(`${NEWS_API_URL}?country=${COUNTRY}&apiKey=${API_KEY}`, {
+      headers,
+    })
+
     dispatch({ type: 'FETCH_NEWS_SUCCESS', payload: response.data.articles })
   } catch (error) {
     dispatch({ type: 'FETCH_NEWS_FAILURE', payload: error.message })
