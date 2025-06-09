@@ -13,8 +13,6 @@ const NewsApp = () => {
     dispatch(setFilters({ [e.target.name]: e.target.value }));
   };
 
-  console.log("->", articles, error);
-
   return (
     <div className="news-container">
       <h1 className="news-title">The News</h1>

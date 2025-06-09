@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchNews } from "../Services/theNews";
+import { fetchNews } from "../services/theNews";
 import { setArticles } from "../redux/slice/newsSlice";
 
 export const useNews = () => {

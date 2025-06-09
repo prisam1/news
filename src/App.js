@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import NewsApp from "./Components/News";
+import NewsApp from "./components/news.js";
 import { store } from "./redux/store.js";
 import "./App.css";
 
