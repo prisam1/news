@@ -13,7 +13,7 @@ const NewsApp = () => {
     dispatch(setFilters({ [e.target.name]: e.target.value }));
   };
 
-  console.log("->", articles);
+  console.log("->", articles, error);
 
   return (
     <div className="news-container">
@@ -61,7 +61,7 @@ const NewsApp = () => {
 
       <div className="news-layout">
         <div className="main-news">
-          {articles.length == 0 ? (
+          {articles.length === 0 && !loading ? (
             <h2>No news found!</h2>
           ) : (
             <>

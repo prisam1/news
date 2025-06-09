@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_KEY = "pub_d943f33333c148b08a3857042cbec269";
-const BASE_URL = "https://newsdata.io/api/1/news";
+const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
+const BASE_URL = process.env.REACT_APP_NEWS_BASE_URL;
 
 export const fetchNews = async (filters) => {
   const params = {
