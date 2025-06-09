@@ -1,44 +1,25 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import store from './redux/Store'
-import NewsList from './Components/NewsList'
-import Registration from './Components/Signup'
-import Login from './Components/Login'
-import ArticleDetail from "./Components/NewsDetails"
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import NewsApp from "./Components/News";
+import { store } from "./redux/store";
+import "./App.css";
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
-      <div className="App">
-          <header className="header">
-            <h1>News App</h1>
-            <ul className="login-links">
-              <li>
-                <Link to="/login" className='link'>Login</Link>
-              </li>
-              <li>
-                <Link to="/register" className='link'>Register</Link>
-              </li>
-            </ul>
-          </header>
+        <div className="App">
           <main>
-            <Routes>
-              <Route path="/" element={<NewsList/>} />
-              <Route path="/register" element={<Registration/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/news/:id" element={ArticleDetail} />
-            </Routes>
+            <NewsApp />
           </main>
           <footer>
-            <p>{new Date().getFullYear()} News App</p>
+            <p>{new Date().getFullYear()} The News</p>
           </footer>
         </div>
       </Router>
     </Provider>
-  )
+  );
 }
 
-export default App
+export default App;
