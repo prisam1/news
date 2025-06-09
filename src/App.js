@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import NewsApp from "./components/news.js";
+import { News } from "./components/news";
 import { store } from "./redux/store.js";
 import "./App.css";
 
@@ -11,7 +11,7 @@ function App() {
       <Router>
         <div className="App">
           <main>
-            <NewsApp />
+            <News />
           </main>
           <footer>
             <p>{new Date().getFullYear()} The News</p>

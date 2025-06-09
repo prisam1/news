@@ -4,7 +4,7 @@ import { setFilters } from "../redux/slice/newsSlice";
 import { useNews } from "../hooks/useNews";
 import "../styles/news.css";
 
-const NewsApp = () => {
+export const News = () => {
   const dispatch = useDispatch();
   const { articles, filters } = useSelector((state) => state.news);
   const { loading, error } = useNews();
@@ -89,5 +89,3 @@ const NewsApp = () => {
     </div>
   );
 };
-
-export default NewsApp;
